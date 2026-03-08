@@ -2,7 +2,7 @@
 session_start();
 require_once 'db.php';
 
-// Redirect if already logged in
+
 if (isset($_SESSION['user_id'])) {
     header('Location: index.php'); exit();
 }
@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $errors[] = 'Passwords do not match.';
 
     if (empty($errors)) {
-        // Check if username/email already exists
+
         $check = $conn->prepare("SELECT id FROM users WHERE username=? OR email=?");
         $check->bind_param('ss', $username, $email);
         $check->execute();
