@@ -1,7 +1,3 @@
--- ============================================
--- BMI Calculator - Full Database Schema
--- Run this in phpMyAdmin > SQL tab
--- ============================================
 
 CREATE DATABASE IF NOT EXISTS bmi_calculator;
 USE bmi_calculator;
